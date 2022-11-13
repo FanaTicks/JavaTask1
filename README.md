@@ -7,3 +7,10 @@
 
 Запуск Main.java
 ![image](https://user-images.githubusercontent.com/75033218/201528577-09f8ef40-02aa-4d28-a933-97951747c98f.png)
+
+Запуск ArrayTest
+![image](https://user-images.githubusercontent.com/75033218/201528682-a25e6e42-4c35-40f7-9466-1aa9c9ece301.png)
+Запуск ShapeTest
+![image](https://user-images.githubusercontent.com/75033218/201528693-909c06ff-68dc-4a28-833c-2a449f55713d.png)
+Запуск TagTest
+![image](https://user-images.githubusercontent.com/75033218/201528700-f4dd721c-45c3-4408-b696-47e8dd808e54.png)
