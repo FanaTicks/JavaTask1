@@ -5,9 +5,14 @@ import java.util.List;
 
 public class Array {
     public List<Integer> sortArray(List<Integer> list) {
+        for (Integer value : list) {
+            if (value == null){
+            throw new IllegalArgumentException("List is null!");
+        }}
         if (list.isEmpty()) {
             throw new IllegalArgumentException("List is empty!");
         }//проверка на пустой лист
+
 
         list.removeIf(value -> value < 0);//удаление элементов которые меньше 0
         list.sort(Collections.reverseOrder());//сортировка масива по убыванию
