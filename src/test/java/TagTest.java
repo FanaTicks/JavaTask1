@@ -17,12 +17,10 @@ public class TagTest {
         secondList.add(null);
         secondList.add("#Helflo wdadwa");
         Tag tag = new Tag();
-        try {
+        IllegalArgumentException a =Assertions.assertThrows(IllegalArgumentException.class,()-> {
             tag.TopTeg(secondList);
-            Assertions.fail("Null accepted!");
-        } catch (IllegalArgumentException e) {
-            assertEquals("Null element!", e.getMessage());
-        }
+        });
+        Assertions.assertEquals("Null element!",a.getMessage());
     }
 
     @Test
@@ -30,13 +28,10 @@ public class TagTest {
         //given
         Tag tag = new Tag();
         ArrayList<String> secondList = new ArrayList<>();
-
-        try {
+        IllegalArgumentException a =Assertions.assertThrows(IllegalArgumentException.class,()-> {
             tag.TopTeg(secondList);
-            Assertions.fail("Empty accepted!");
-        } catch (IllegalArgumentException e) {
-            assertEquals("List is empty!", e.getMessage());
-        }
+        });
+        Assertions.assertEquals("List is empty!",a.getMessage());
     }
 
     @Test

@@ -8,6 +8,10 @@ import java.util.stream.Collectors;
 
 public class ShapeSort {
     public Map<String, Integer> SortShape(Collection stringList) {
+        for (Object value : stringList) {
+            if (value == null){
+                throw new IllegalArgumentException("Null element!");
+            }}//проверка на Null
         if (stringList.isEmpty()) {
             throw new IllegalArgumentException("Collection is empty!");
         }

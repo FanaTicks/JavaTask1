@@ -3,25 +3,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 public class ArrayTest {
     @Test
     public  void  testArrayEmpty(){
         //given
         Array array = new Array();
         List<Integer> list = new ArrayList<>(List.of());
-
-        try {
+        IllegalArgumentException a =Assertions.assertThrows(IllegalArgumentException.class,()-> {
             array.sortArray(list);
-            Assertions.fail("Empty accepted!");
-        } catch (IllegalArgumentException e) {
-            assertEquals("List is empty!", e.getMessage());
-        }
+        });
+        Assertions.assertEquals("List is empty!",a.getMessage());
+
     }
 
     @Test
