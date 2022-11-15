@@ -3,14 +3,16 @@ package org.example.task2;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Tag2 {
+public class Tag {
     public Map<String, Integer> TopTeg(ArrayList<String> secondList) {
 
         if (secondList.isEmpty()) {
             throw new IllegalArgumentException("List is empty!");
         }//проверка на пустой лист
-
-        secondList.remove(null);//удаление пустых строчек
+        for (String value : secondList) {
+            if (value == null){
+                throw new IllegalArgumentException("Null element!");
+            }}//проверка на Null
 
         Map<String, Integer> map = new HashMap<>();
         for (String s : secondList) {
