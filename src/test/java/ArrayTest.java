@@ -20,6 +20,19 @@ public class ArrayTest {
     }
 
     @Test
+    public  void  testArrayNull(){
+        //given
+        Array array = new Array();
+        List<Integer> list = new ArrayList<>();
+        list.add(null);
+        IllegalArgumentException a =Assertions.assertThrows(IllegalArgumentException.class,()-> {
+            array.sortArray(list);
+        });
+        Assertions.assertEquals("List is null!",a.getMessage());
+
+    }
+
+    @Test
     public  void  testArrayMinus(){
         //given
         Array array = new Array();
