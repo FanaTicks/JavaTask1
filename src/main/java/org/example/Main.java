@@ -1,8 +1,8 @@
 package org.example;
 
 import org.example.task1.Array;
-import org.example.task2.Tag2;
-import org.example.task3.Shape;
+import org.example.task2.Tag;
+import org.example.task3.ShapeSort;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,16 +20,16 @@ public class Main {
         secondList2.add("#Hello wdadwa #wda #Hello #Helflo #Helfdalo");
         secondList2.add("awdgr #Heldwalo wdadwa #wda #Helflo");
         secondList2.add("#Helflo wdadwa #wwadda wdaadw #Hello");
-        Tag2 teg2 = new Tag2();
-        System.out.println(teg2.TopTeg(secondList2));
+        Tag tag = new Tag();
+        System.out.println(tag.TopTeg(secondList2));
 
         //task3
         Collection col = new ArrayList();
         col.add("Cube");
         col.add("Bullet");
         col.add("Cylinder");
-        Shape shape = new Shape();
-        System.out.println(shape.SortShape(col));
+        ShapeSort shapeSort= new ShapeSort();
+        System.out.println(shapeSort.SortShape(col));
 
     }
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ArrayTest {
     @Test
@@ -20,23 +21,6 @@ public class ArrayTest {
             Assertions.fail("Empty accepted!");
         } catch (IllegalArgumentException e) {
             assertEquals("List is empty!", e.getMessage());
-        }
-    }
-
-    @Test
-    public  void  testArrayNull(){
-        //given
-        Array array = new Array();
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(null);
-
-
-
-        try {
-            array.sortArray(list);
-            Assertions.fail("Null list!");
-        } catch (IllegalArgumentException e) {
-            assertEquals("List is null!", e.getMessage());
         }
     }
 
